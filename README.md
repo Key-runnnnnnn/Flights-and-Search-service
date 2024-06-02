@@ -1,13 +1,14 @@
-folder structure
-
-/
--src/
-    index.js //server
-    models/
-    controllers/
-    middlewares/
-    survices/
-    utils/
-    config/
-    repository/
--test/
+<h4>folder structure </h4>
+<hr><br>
+<p>/<br>
+-src/<br>
+    index.js //server<br>
+    models/<br>
+    controllers/<br>
+    middlewares/<br>
+    survices/<br>
+    utils/<br>
+    config/<br>
+    repository/<br>
+-test/<br>
+</p>
