@@ -1,6 +1,6 @@
 <h4>folder structure </h4>
 <hr><br>
-<p>/
+<p>/<br>
 -src/<br>
     index.js //server<br>
     models/<br>
