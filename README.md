@@ -5,8 +5,8 @@
 - Execute 'npm install' on the same path as of your root directory of downloaded project
 - Create '.env' file in your directory and the following variables in it
     - 'PORT = 3000'
-    
--Inside 'src/config' folder create 'config.json' file and the following piece of json
+
+- Inside 'src/config' folder create 'config.json' file and the following piece of json
 
 ```
 {
