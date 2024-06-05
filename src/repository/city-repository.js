@@ -25,7 +25,7 @@ class CityRepository {
     }
   }
 
-  async updateCity(cityId, data ) {  //data ->{name:'Mumbai'}
+  async updateCity(cityId, data) {  //data ->{name:'Mumbai'}
     try {
 
       //the below commented approach also works but will not returns the updated object
@@ -37,8 +37,8 @@ class CityRepository {
       //     id: cityId
       //   },
       // });
-      const city=await City.findByPk(cityId)
-      city.name=data.name
+      const city = await City.findByPk(cityId)
+      city.name = data.name
       await city.save()
       return city;
     } catch (error) {
@@ -50,6 +50,15 @@ class CityRepository {
     try {
       const city = await City.findByPk(cityId)
       return city;
+    } catch (error) {
+      throw { error };
+    }
+  }
+
+  async getAllCities() {
+    try {
+      const cities = await City.findAll();
+      return cities;
     } catch (error) {
       throw { error };
     }
