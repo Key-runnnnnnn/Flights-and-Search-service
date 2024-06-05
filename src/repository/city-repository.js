@@ -32,6 +32,7 @@ class CityRepository {
           id: cityId
         }
       });
+      return city;
     } catch (error) {
       throw { error };
     }
@@ -40,8 +41,9 @@ class CityRepository {
   async getCity(cityId) {
     try {
       const city = await City.findByPk(cityId)
+      return city;
     } catch (error) {
-
+      throw { error };
     }
   }
 }
