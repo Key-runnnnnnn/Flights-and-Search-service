@@ -68,3 +68,8 @@ npx sequelize model:generate --name Airport --attributes name:String,address:Str
 }
 ```
 - Once you have added db config as listed above, go the src folder from your terminal and execute 'npx sequelize db:create'
+
+- Sequelize cli docs
+```
+https://github.com/sequelize/cli/blob/main/docs/FAQ.md
+``` 
