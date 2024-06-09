@@ -12,6 +12,16 @@ class CityRepository {
     }
   }
 
+  async createManyCities(data) {
+    try {
+      const cities = await City.bulkCreate(data);
+      return cities;
+    } catch (error) {
+      console.log("Something went wrong in repository layer");
+      throw { error };
+    }
+  }
+
   async deleteCity(cityId) {
     try {
       await City.destroy({
@@ -58,11 +68,11 @@ class CityRepository {
 
   async getAllCities(filter) {
     try {
-      if(filter.name){
+      if (filter.name) {
         const cities = await City.findAll({
           where: {
             name: {
-               [Op.startsWith]: filter.name
+              [Op.startsWith]: filter.name
             }
           }
         })
