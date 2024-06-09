@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const {PORT} = require('./config/serverConfig');
 const ApiRoutes = require('./routes/index');
 const db = require('./models/index');
+// const {Airplane} = require('./models/index')
 
 const SetupAndStartServer = async ()=>{
     const app = express();
@@ -14,6 +15,11 @@ const SetupAndStartServer = async ()=>{
         if(process.env.SYNC_DB){
             db.sequelize.sync({alter: true})
         }
+
+        // create airplanes directly in index.js file
+        // await Airplane.create({
+        //     modelNumber:'Bombardier CRJ'
+        // })
     }); 
 }   
 
