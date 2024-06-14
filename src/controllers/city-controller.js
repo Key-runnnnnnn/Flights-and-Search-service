@@ -22,29 +22,6 @@ const create = async (req, res) => {
   }
 }
 
-// Creat multiple cities in one go
-
-const createMany = async (req,res)=>{
-  try{
-    const cities = await cityService.createManyCities(req.body);
-    return res.status(201).json({
-      data: cities,
-      success: true,
-      messege: "Cities created successfully",
-      err: {}
-    });
-  } 
-  catch (error) {
-    console.log(error)
-    return res.status(500).json({
-      data: {},
-      success: false,
-      messege: "Something went wrong.....not able to create cities",
-      err: error
-    })
-  }
-}
-
 // DELETE - /city/:id
 const destroy = async (req, res) => {
   try {
@@ -130,7 +107,6 @@ const getAll= async (req,res)=>{
 
 module.exports = {
   create,
-  createMany,
   destroy,
   get,
   update,
