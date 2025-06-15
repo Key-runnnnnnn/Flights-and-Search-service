@@ -4,6 +4,7 @@ const { Op } = require('sequelize');
 class FlightRepository {
 
     #createFilter(data) {
+        //# is used for private methods in class
         let filter = {};
         if (data.arrivalAirportId) {
             filter.arrivalAirportId = data.arrivalAirportId;

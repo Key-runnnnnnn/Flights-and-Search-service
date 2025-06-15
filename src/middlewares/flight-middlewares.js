@@ -14,7 +14,7 @@ const validateCreateFlight = (req, res, next) => {
             data: {},
             success: false,
             message: 'Invalid request body for create flight',
-            err: 'Missing mandatory properties to create a flight'
+            err: 'Missing mandatory properties to create a flight'  
         });
     }
 
